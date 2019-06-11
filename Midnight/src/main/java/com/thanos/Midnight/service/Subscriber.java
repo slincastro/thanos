@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class Subscriber implements MqttCallback {
-    
+
     ClientConfiguration clientConfiguration;
 
     MqttClient client;
