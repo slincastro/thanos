@@ -25,9 +25,8 @@ pip install adafruit-ampy
 
 ampy --port /dev/tty.SLAB_USBtoUART --baud 115200 ls
 
-//no funciona screen /dev/tty.SLAB_USBtoUART 115200 
-
 python -m serial.tools.miniterm --raw /dev/tty.SLAB_USBtoUART 115200
 
-ampy --port /dev/tty.SLAB_USBtoUART run --no-output gamora.py
+run local script on esp8266
+´ampy --port /dev/tty.SLAB_USBtoUART run --no-output gamora.py´
 
