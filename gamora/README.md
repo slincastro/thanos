@@ -2,6 +2,8 @@
 
 [Reference](http://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware)
 
+## Install Firmware over esp8266
+
 `ls /dev/tty.usb*`
 `/dev/tty.SLAB_USBtoUART`
 `esptool.py --port /dev/tty.SLAB_USBtoUART erase_flash`
@@ -30,3 +32,5 @@ python -m serial.tools.miniterm --raw /dev/tty.SLAB_USBtoUART 115200
 run local script on esp8266
 ´ampy --port /dev/tty.SLAB_USBtoUART run --no-output gamora.py´
 
+Put reference on esp memory
+´ampyampy --port /dev/tty.SLAB_USBtoUART put LedManager.py´
