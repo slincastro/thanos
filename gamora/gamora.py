@@ -5,7 +5,13 @@ import machine
 import time
 import network
 import ubinascii
+import json
 
+config = {'key1': 'value1', 'key2': 'value2'}
+
+f = open('config.json', 'w')
+f.write(json.dumps(config))
+f.close()
 
 client_id = ubinascii.hexlify(machine.unique_id())
 topic_sub = b'myfirst/test'

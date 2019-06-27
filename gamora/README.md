@@ -1,10 +1,15 @@
-#list ports
+#Gam0ra
 
-[Reference](http://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware)
+Gamora is an IOT node of Thanos project, its writed on micropython and designed to run in an esp8266mod.
+
+## list ports
+
+`ls /dev/tty.usb*`
 
 ## Install Firmware over esp8266
 
-`ls /dev/tty.usb*`
+[Reference](http://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware)
+
 `/dev/tty.SLAB_USBtoUART`
 `esptool.py --port /dev/tty.SLAB_USBtoUART erase_flash`
 `esptool.py --port /dev/tty.SLAB_USBtoUART --baud 460800 write_flash --flash_size=detect 0 esp8266-20170108-v1.8.7.bin`
