@@ -7,17 +7,15 @@ import network
 import ubinascii
 import json
 
-config = {'key1': 'value1', 'key2': 'value2'}
 
-f = open('config.json', 'w')
-f.write(json.dumps(config))
-f.close()
+file = open('config.json', 'r')
+configuration = json.load(file)
 
-client_id = ubinascii.hexlify(machine.unique_id())
-topic_sub = b'myfirst/test'
-topic_pub = b'myfirst/test'
-mqtt_server = b'10.76.124.45'
-client_id = "espClientTest"
+#client_id = ubinascii.hexlify(machine.unique_id())
+topic_sub = configuration['topicSubscription']
+topic_pub = configuration['topicPublication']
+mqtt_server = configuration['mqttServer']
+client_id = configuration['clientId']
 wifi_ssid = 'twguest'
 wifi_secret = 'heroic crab mammal dual swig'
 client = MQTTClient(client_id, mqtt_server)
