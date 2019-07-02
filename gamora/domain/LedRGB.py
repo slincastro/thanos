@@ -1,5 +1,6 @@
 import time
 
+
 class RGBLed:
     def __init__(self, leds):
         self.leds = leds
