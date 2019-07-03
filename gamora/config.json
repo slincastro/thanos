@@ -2,5 +2,7 @@
   "clientId": "espClientTest",
   "topicSubscription" : "myfirst/test",
   "topicPublication" : "myfirst/test",
-  "mqttServer" : "10.76.124.45"
+  "mqttServer" : "10.76.124.45",
+  "wifiSsid" : "twguest",
+  "wifiSecret" : "heroic crab mammal dual swig"
 }

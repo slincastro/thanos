@@ -1,14 +1,13 @@
 import json
+from MQTTConfiguration import MQTTConfiguration
+from WifiConfiguration import WifiConfiguration
 
 
 class Configuration:
 
     def __init__(self, configuration_path):
-        self.mqtt = None
-        self.mqtt.mqtt_server = None
-        self.mqtt.topic_sub = None
-        self.mqtt.topic_pub = None
-        self.mqtt.client_id = None
+        self.wifi = WifiConfiguration()
+        self.mqtt = MQTTConfiguration()
 
         self.configuration_path = configuration_path
         self.file_data = self.read_json()
@@ -26,6 +25,8 @@ class Configuration:
         self.mqtt.topic_sub = self.extract_value("topicSubscription")
         self.mqtt.topic_pub = self.extract_value("topicPublication")
         self.mqtt.mqtt_server = self.extract_value("mqttServer")
+        self.wifi.ssid = self.extract_value("wifiSsid")
+        self.wifi.secret = self.extract_value("wifiSecret")
         pass
 
     def extract_value(self, key):
