@@ -1,3 +1,5 @@
 {
-  "clientId": "espClientTest"
+  "clientId": "espClientTest",
+  "wifiSsid" : "wifiTest",
+  "wifiSecret" : "secreTtest"
 }
