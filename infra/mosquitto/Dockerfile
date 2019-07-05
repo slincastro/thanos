@@ -1,1 +1,1 @@
-FROM eclipse-mosquitto:1.6.2
+FROM eclipse-mosquitto:latest

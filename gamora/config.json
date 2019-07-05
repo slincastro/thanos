@@ -1,5 +1,5 @@
 {
-  "clientId": "espClientTest",
+  "clientId": "espClientRf",
   "topicSubscription" : "myfirst/test",
   "topicPublication" : "myfirst/test",
   "mqttServer" : "10.76.124.45",

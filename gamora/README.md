@@ -55,6 +55,8 @@ Run local script on esp8266
 
 `pip install adafruit-ampy`
 
+
+
 * List files in esp
 
     `ampy --port /dev/tty.SLAB_USBtoUART --baud 115200 ls`
@@ -79,3 +81,6 @@ Run local script on esp8266
 
     `ampy --port /dev/tty.SLAB_USBtoUART put ./domain/`
 
+
+`>>> import upip`
+ `>>> upip.install("paho-mqtt")`

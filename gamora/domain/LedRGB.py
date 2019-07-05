@@ -2,8 +2,11 @@ import time
 
 
 class RGBLed:
-    def __init__(self, leds):
-        self.leds = leds
+    def __init__(self, red_led, green_led, blue_led,):
+        self.leds = [red_led, blue_led, green_led]
+        self.red_led = red_led
+        self.blue_led = blue_led
+        self.green_led = green_led
         pass
 
     def blink(self, led):

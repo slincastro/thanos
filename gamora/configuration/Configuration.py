@@ -1,6 +1,8 @@
 import json
-from MQTTConfiguration import MQTTConfiguration
-from WifiConfiguration import WifiConfiguration
+import sys
+sys.path.append('../')
+from configuration.MQTTConfiguration import MQTTConfiguration
+from configuration.WifiConfiguration import WifiConfiguration
 
 
 class Configuration:
