@@ -36,8 +36,8 @@ pip install adafruit-ampy
 download miniconda
 [link](https://docs.conda.io/en/latest/miniconda.html)
 
-export PATH="$HOME/miniconda3/bin:$PATH"
-source $HOME/miniconda3/bin/activate
+`export PATH="$HOME/miniconda3/bin:$PATH"`
+`source $HOME/miniconda3/bin/activate`
 
 * create environment
   

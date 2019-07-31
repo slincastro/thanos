@@ -11,7 +11,7 @@ echo "----------------------------------------------"
 ampy --port /dev/tty.SLAB_USBtoUART put ./domain/
 ampy --port /dev/tty.SLAB_USBtoUART put ./configuration/
 ampy --port /dev/tty.SLAB_USBtoUART put ./util/
-ampy --port /dev/tty.SLAB_USBtoUART put gamora.py
+ampy --port /dev/tty.SLAB_USBtoUART put gamora.py main.py
 ampy --port /dev/tty.SLAB_USBtoUART put config.json
 echo "---------------Folder------------------"
 ampy --port /dev/tty.SLAB_USBtoUART ls 
@@ -22,4 +22,4 @@ ampy --port /dev/tty.SLAB_USBtoUART ls util
 echo "---------------Configuration Folder------------------"
 ampy --port /dev/tty.SLAB_USBtoUART ls configuration
 echo "Run Application ......"
-ampy --port /dev/tty.SLAB_USBtoUART run gamora.py
+#ampy --port /dev/tty.SLAB_USBtoUART run gamora.py

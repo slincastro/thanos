@@ -37,7 +37,7 @@ class Mqtt:
                 while not client.connect():
                     time.sleep(4.5)
                     self.rgb_led.blink(self.rgb_led.blue_led)
-                    msg = " hi from python "
+                    msg = " hi from python :"+ str(retry)
                     self.write_log("connectiong to server ....")
                     client.publish(self.configuration.mqtt.topic_pub, msg)
                     reconection = False
