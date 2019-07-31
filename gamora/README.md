@@ -3,6 +3,11 @@
 Gamora is an IOT node of Thanos project, its writed on micropython and designed to run in an esp8266mod.
 
 the first step is Load a micropython firmware on esp8266mod.
+Prerequisites
+
+0. Install Drivers Mac [Drivers](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers),
+
+install Python3
 
 ### load micropython firmware on Mac
 
@@ -10,9 +15,12 @@ the first step is Load a micropython firmware on esp8266mod.
 
 `ls /dev/tty.usb*`
 
+`ls /dev/tty.*`
+
 [Reference](http://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware)
 
 `/dev/tty.SLAB_USBtoUART`
+
 
 2. Install esptool with pip command. 
    
@@ -39,15 +47,16 @@ download miniconda
 `export PATH="$HOME/miniconda3/bin:$PATH"`
 `source $HOME/miniconda3/bin/activate`
 
-* create environment
+Optional
+    * create environment
   
-    `conda create --name`
+        `conda create --name`
 
-* activate environmen
+    * activate environmen
   
-    `conda activate thanos`
+        `conda activate thanos`
 
-https://pythonforundergradengineers.com/upload-py-files-to-esp8266-running-micropython.html
+    https://pythonforundergradengineers.com/upload-py-files-to-esp8266-running-micropython.html
 
 ### install ampy
 
