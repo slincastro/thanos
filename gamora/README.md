@@ -93,3 +93,7 @@ Run local script on esp8266
 
 `>>> import upip`
  `>>> upip.install("paho-mqtt")`
+
+ * Miniterm 
+  
+  `python -m serial.tools.miniterm --raw /dev/tty.SLAB_USBtoUART 115200`
