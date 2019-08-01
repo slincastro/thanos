@@ -1,32 +1,30 @@
-#Gam0ra
+# Gam0ra
 
 Gamora is an IOT node of Thanos project, its writed on micropython and designed to run in an esp8266mod.
 
-the first step is Load a micropython firmware on esp8266mod.
-Prerequisites
+The first step is Load a micropython firmware on esp8266mod.
 
-0. Install Drivers Mac [Drivers](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers),
+### Prerequisites
 
-install Python3
+0. Install Board Drivers for Mac [Drivers](https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers)
 
-### load micropython firmware on Mac
+0. Install [Python3](https://docs.python-guide.org/starting/install3/osx/)
 
-1. list ports.
+### Load micropython firmware on Mac
 
-`ls /dev/tty.usb*`
+1. List ports to find the name of the board.
 
-`ls /dev/tty.*`
+    `ls /dev/tty.*`
 
-[Reference](http://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware)
+    `/dev/tty.SLAB_USBtoUART`
 
-`/dev/tty.SLAB_USBtoUART`
+1.  Donwload bin file [Reference](http://docs.micropython.org/en/latest/esp8266/tutorial/intro.html#deploying-the-firmware)
 
-
-2. Install esptool with pip command. 
+1. Install esptool with pip command. 
    
     `pip install esptool`
 
-3. Clear flash with esptool.
+1. Clear flash with esptool.
    
     `esptool.py --port /dev/tty.SLAB_USBtoUART erase_flash`
 
@@ -34,14 +32,14 @@ install Python3
     
     `esptool.py --port /dev/tty.SLAB_USBtoUART --baud 460800 write_flash --flash_size=detect 0 esp8266-20170108-v1.8.7.bin`
 
-### install ampy
+### Install ampy
 
 You need ampy in order to connect in realtime on esp by serial port
 pip install adafruit-ampy
 
-### install miniconda
+### Install miniconda
 
-download miniconda
+Download miniconda
 [link](https://docs.conda.io/en/latest/miniconda.html)
 
 `export PATH="$HOME/miniconda3/bin:$PATH"`
@@ -58,7 +56,7 @@ Optional
 
     https://pythonforundergradengineers.com/upload-py-files-to-esp8266-running-micropython.html
 
-### install ampy
+### Install ampy
 
 Run local script on esp8266
 
@@ -90,9 +88,11 @@ Run local script on esp8266
 
     `ampy --port /dev/tty.SLAB_USBtoUART put ./domain/`
 
+????
 
 `>>> import upip`
- `>>> upip.install("paho-mqtt")`
+
+`>>> upip.install("paho-mqtt")`
 
  * Miniterm 
   
