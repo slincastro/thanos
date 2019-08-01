@@ -15,11 +15,11 @@ echo "ESP PORT :"$ESP8266_PORT
 echo "---------------------------------------------------------------------------"
 
 rm -rf $BASE_PATH 
-#mkdir /Users/scastro/Projects/esp8266-dependencies/
+mkdir $BASE_PATH
 
-#curl -o $FIRMWARE_PATH $FIRMWARE_URL
+curl -o $FIRMWARE_PATH $FIRMWARE_URL
 
-#esptool.py --port $ESP8266_PORT erase_flash
+esptool.py --port $ESP8266_PORT erase_flash
 
-#esptool.py --port $ESP8266_PORT --baud 460800 write_flash --flash_size=detect 0 $FIRMWARE_PATH
+esptool.py --port $ESP8266_PORT --baud 460800 write_flash --flash_size=detect 0 $FIRMWARE_PATH
 
