@@ -1,16 +1,25 @@
 #!/bin/sh
-mkdir /Users/scastro/Projects/esp8266-dependencies/
 
-FIRMWARE_PATH= '/Users/scastro/Projects/esp32-dependencies/esp32-Frirmware.bin'
+USER=$(id -un)
+BASE_PATH="/Users/$USER/Projects/esp8266-dependencies/"
+FIRMWARE_PATH=$BASE_PATH'esp8266-Frirmware.bin'
+FIRMWARE_URL='https://micropython.org/resources/firmware/esp8266-20190529-v1.11.bin'
+ESP8266_PORT=$(ls /dev/tty.* | grep "USB")
 
+echo "---------------------------------------------------------------------------"
+echo "Base Path :" $BASE_PATH
+echo "Firmware Path :" $FIRMWARE_PATH
+echo "Firmware URL :" $FIRMWARE_URL
+echo "USER :" $USER
+echo "ESP PORT :"$ESP8266_PORT
+echo "---------------------------------------------------------------------------"
 
-curl -o /Users/scastro/Projects/esp8266-dependencies/esp8266-Frirmware.bin 'https://micropython.org/resources/firmware/esp8266-20190529-v1.11.bin' 
+rm -rf $BASE_PATH 
+#mkdir /Users/scastro/Projects/esp8266-dependencies/
 
-#SERIAL_PORT= ls /dev/tty.* | grep 'USB'
-#ESP32_PORT= "/dev/tty.SLAB_USBtoUART"
-#echo "Port :"
-#echo $ESP32_PORT
-esptool.py --port /dev/tty.SLAB_USBtoUART erase_flash
+#curl -o $FIRMWARE_PATH $FIRMWARE_URL
 
-esptool.py --port /dev/tty.SLAB_USBtoUART --baud 460800 write_flash --flash_size=detect 0 /Users/scastro/Projects/esp8266-dependencies/esp8266-Frirmware.bin
+#esptool.py --port $ESP8266_PORT erase_flash
+
+#esptool.py --port $ESP8266_PORT --baud 460800 write_flash --flash_size=detect 0 $FIRMWARE_PATH
 
