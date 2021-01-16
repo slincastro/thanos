@@ -56,13 +56,19 @@ Optional
 
     https://pythonforundergradengineers.com/upload-py-files-to-esp8266-running-micropython.html
 
+> Use ampy o miniter to connect to esp8266
+
+
 ### Install ampy
 
 Run local script on esp8266
 
-`pip install adafruit-ampy`
+- depending of the python version :
+    > `pip install adafruit-ampy`
+    > `pip3.8 install adafruit-ampy`
 
-
+* Include ampy in path (this works for 3.8 version)
+    `PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/; export PATH`
 
 * List files in esp
 
@@ -94,8 +100,8 @@ Run local script on esp8266
 
 `>>> upip.install("paho-mqtt")`
 
- * Miniterm 
+### Install Miniterm 
    
    `pip install --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.org xlrd`
-  
+
    `python -m serial.tools.miniterm --raw /dev/tty.SLAB_USBtoUART 115200`
