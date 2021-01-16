@@ -69,6 +69,13 @@ You need ampy in order to connect in realtime on esp by serial port
 * Put directory
 
     `ampy --port /dev/tty.SLAB_USBtoUART put ./domain/`
+
 * Get file 
+    
     `ampy --port /serial/port get boot.py`
 
+### Set an Alias :
+
+`alias gamora='ampy --port /dev/tty.SLAB_USBtoUART' `
+
+now you can use gamora instead of apmpy .....
