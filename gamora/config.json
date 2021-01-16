@@ -3,6 +3,6 @@
   "topicSubscription" : "myfirst/test",
   "topicPublication" : "myfirst/test",
   "mqttServer" : "10.71.124.220",
-  "wifiSsid" : "twguest",
-  "wifiSecret" : "heroic crab mammal dual swig"
+  "wifiSsid" : "",
+  "wifiSecret" : ""
 }

@@ -40,7 +40,7 @@ You need ampy in order to connect in realtime on esp by serial port
 
 - depending of the python version :
     > `pip install adafruit-ampy`
-    
+
     > `pip3.8 install adafruit-ampy`
 
 * Include ampy in path (this works for 3.8 version)
@@ -60,7 +60,7 @@ You need ampy in order to connect in realtime on esp by serial port
 
 * Put reference on esp memory
     
-    `ampyampy --port /dev/tty.SLAB_USBtoUART put LedManager.py`
+    `ampy --port /dev/tty.SLAB_USBtoUART put LedManager.py`
 
 * Remove directory
 
@@ -69,8 +69,10 @@ You need ampy in order to connect in realtime on esp by serial port
 * Put directory
 
     `ampy --port /dev/tty.SLAB_USBtoUART put ./domain/`
+* Get file 
+    `ampy --port /serial/port get boot.py`
 
-????
+-----------------------------------------------------------------------------------------------------------------------
 
 `>>> import upip`
 
