@@ -13,7 +13,9 @@
 `brew install hivemq/mqtt-cli/mqtt-cli`
 
 * subscribe 
+
 `mqtt sub -t test -h localhost -p 1883`
 
 * publish
+
 ` mqtt pub -t test -m "Hello" -h localhost -p 1883`

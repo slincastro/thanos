@@ -72,14 +72,3 @@ You need ampy in order to connect in realtime on esp by serial port
 * Get file 
     `ampy --port /serial/port get boot.py`
 
------------------------------------------------------------------------------------------------------------------------
-
-`>>> import upip`
-
-`>>> upip.install("paho-mqtt")`
-
-### Install Miniterm 
-   
-   `pip install --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.org xlrd`
-
-   `python -m serial.tools.miniterm --raw /dev/tty.SLAB_USBtoUART 115200`
