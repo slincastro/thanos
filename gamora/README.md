@@ -35,36 +35,12 @@ The first step is Load a micropython firmware on esp8266mod.
 ### Install ampy
 
 You need ampy in order to connect in realtime on esp by serial port
-pip install adafruit-ampy
-
-### Install miniconda
-
-Download miniconda
-[link](https://docs.conda.io/en/latest/miniconda.html)
-
-`export PATH="$HOME/miniconda3/bin:$PATH"`
-`source $HOME/miniconda3/bin/activate`
-
-Optional
-    * create environment
-  
-        `conda create --name`
-
-    * activate environmen
-  
-        `conda activate thanos`
-
-    https://pythonforundergradengineers.com/upload-py-files-to-esp8266-running-micropython.html
-
-> Use ampy o miniter to connect to esp8266
-
 
 ### Install ampy
 
-Run local script on esp8266
-
 - depending of the python version :
     > `pip install adafruit-ampy`
+    
     > `pip3.8 install adafruit-ampy`
 
 * Include ampy in path (this works for 3.8 version)
