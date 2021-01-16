@@ -95,5 +95,7 @@ Run local script on esp8266
 `>>> upip.install("paho-mqtt")`
 
  * Miniterm 
+   
+   `pip install --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.org xlrd`
   
-  `python -m serial.tools.miniterm --raw /dev/tty.SLAB_USBtoUART 115200`
+   `python -m serial.tools.miniterm --raw /dev/tty.SLAB_USBtoUART 115200`
