@@ -4,7 +4,7 @@ echo "-------- Preparing to deploy gamora ----------"
 echo "----------------------------------------------"
 echo "Cleaning older artifacts"
 echo "----------------------------------------------"
-sh ./clean.sh
+#sh ./clean.sh
 echo "----------------------------------------------"
 echo "Deploying Artifacts"
 echo "----------------------------------------------"
