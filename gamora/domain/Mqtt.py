@@ -21,10 +21,10 @@ class Mqtt:
         pass
 
     def sub_cb(self, topic, msg):
-        #self.pulse = self.pulse + 10
-        #self.servo.Move(self.pulse)
-        self.write_log("receiving message")
-        self.write_log("receiving message" + str(msg))
+        self.pulse = self.pulse + 10
+        self.servo.Move(self.pulse)
+        self.rgb_led.blink(self.rgb_led.green_led)
+        self.write_log("receiving message =>" + str(msg))
 
     def connect_and_subscribe(self):
         self.write_log("start connection to server")
@@ -55,9 +55,6 @@ class Mqtt:
                     retry+=1
                     pass
             time.sleep(5)
-        # client.subscribe(topic_sub)
-        #print('Connected to %s MQTT broker, subscribed to %s topic' % (mqtt_server, topic_sub))
-        #return client
 
     def write_log(self, message):
         f = open("log.txt", "a")
