@@ -21,10 +21,16 @@ class Mqtt:
         pass
 
     def sub_cb(self, topic, msg):
-        self.pulse = self.pulse + 10
-        self.servo.Move(self.pulse)
+        message = str(msg)
         self.rgb_led.blink(self.rgb_led.green_led)
-        self.write_log("receiving message =>" + str(msg))
+        self.write_log("receiving message =>" + message)
+        if "open" in message:
+            self.servo.Move(60)
+            self.write_log("open")
+        elif "close" in message:
+            self.servo.Move(100)
+            self.write_log("close")
+
 
     def connect_and_subscribe(self):
         self.write_log("start connection to server")

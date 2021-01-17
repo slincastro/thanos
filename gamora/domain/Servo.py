@@ -9,3 +9,9 @@ class Servo:
 
     def Move(self, pulse_number):
         self.servo.duty(pulse_number)
+
+    def Open(self):
+        self.servo.duty(40)
+    
+    def Close(self):
+        self.servo.duty(140)
