@@ -1,4 +1,5 @@
 from umqtt.simple import MQTTClient
+from domain.Servo import Servo
 import time
 
 
@@ -13,15 +14,17 @@ class Mqtt:
         self.write_log("pub topic : "+ self.configuration.mqtt.topic_pub + "\n")
         self.wifi_connection = wifi_connection
         self.rgb_led = rgb_led
+        self.servo = Servo(14)
+        self.pulse = 40
 
     def connect(self):
         pass
 
-    def sub_cb(self, msg):
-        #print(topic, msg)
-        #if self.configuration.mqtt.topic_sub == b'notification' and msg == b'received':
-           # print('ESP received hello message')
-           return "hi"
+    def sub_cb(self, topic, msg):
+        #self.pulse = self.pulse + 10
+        #self.servo.Move(self.pulse)
+        self.write_log("receiving message")
+        self.write_log("receiving message" + str(msg))
 
     def connect_and_subscribe(self):
         self.write_log("start connection to server")
@@ -38,8 +41,10 @@ class Mqtt:
                     time.sleep(4.5)
                     self.rgb_led.blink(self.rgb_led.blue_led)
                     msg = " hi from python :"+ str(retry)
-                    self.write_log("connectiong to server ....")
-                    client.publish(self.configuration.mqtt.topic_pub, msg)
+                    self.write_log("connecting to server ....")
+                    #client.publish(self.configuration.mqtt.topic_pub, msg)
+                    client.subscribe(b"myfirst/test")
+                    client.wait_msg()
                     reconection = False
             except Exception as e:
                     self.write_log("Can't connect to mqtt..... try:" + str(retry+1))
