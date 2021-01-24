@@ -11,7 +11,7 @@ class Servo:
         self.servo.duty(pulse_number)
 
     def Open(self):
-        self.Move(60)
+        self.Move(90)
     
     def Close(self):
-        self.Move(100)
+        self.Move(95)

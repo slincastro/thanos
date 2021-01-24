@@ -25,10 +25,10 @@ class Mqtt:
         self.rgb_led.blink(self.rgb_led.green_led)
         self.write_log("receiving message =>" + message)
         if "open" in message:
-            self.servo.Move(60)
+            self.servo.Move(45)
             self.write_log("open")
         elif "close" in message:
-            self.servo.Move(100)
+            self.servo.Move(95)
             self.write_log("close")
 
 
