@@ -27,8 +27,8 @@ void setup() {
   pinMode(redLed,OUTPUT);
   pinMode(blueLed,OUTPUT);
     
-  const char* ssid = "twguest";
-  const char* password =  "heroic crab mammal dual swig";
+  const char* ssid = "network";
+  const char* password =  "network-pass";
 
   WiFi.begin(ssid, password);
   if(isLogEnabled) {
