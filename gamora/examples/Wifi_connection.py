@@ -2,7 +2,7 @@ import network
 import machine
 import time
 
-class Quake:
+class Wifi_connection:
     def __init__(self):
         
         pass
@@ -25,4 +25,4 @@ class Quake:
 
 green_led = machine.Pin(16, machine.Pin.OUT)
 green_led.value(0)
-Quake().connect()
+Wifi_connection().connect()
