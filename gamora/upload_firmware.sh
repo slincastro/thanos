@@ -3,7 +3,7 @@
 USER=$(id -un)
 BASE_PATH=$(pwd)'/esp8266-dependencies/'
 FIRMWARE_PATH=$BASE_PATH'esp8266-Frirmware.bin'
-FIRMWARE_URL='https://micropython.org/resources/firmware/esp8266-20190529-v1.11.bin'
+FIRMWARE_URL='https://micropython.org/resources/firmware/esp8266-20200911-v1.13.bin'
 ESP8266_PORT=$(ls /dev/tty.* | grep "USB")
 
 echo "---------------------------------------------------------------------------"
