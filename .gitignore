@@ -1,2 +1,4 @@
 *.pyc
 .pyc
+esp8266-dependencies
+.DS_Store
