@@ -10,6 +10,7 @@ class Wifi:
 
     def connect(self):
         sta_if = network.WLAN(network.STA_IF)
+        sta_if.active(True)
         sta_if.connect(self.configuration.wifi.ssid, self.configuration.wifi.secret)
 
         while not sta_if.isconnected():
