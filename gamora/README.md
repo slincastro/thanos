@@ -1,6 +1,6 @@
 # Gam0ra
 
-Gamora is an IOT node of Thanos project, its writed on micropython and designed to run in an esp8266mod.
+Gamora is an IOT node of Thanos project, this was written in micropython and designed to run in an esp8266mod.
 
 The first step is Load a micropython firmware on esp8266mod.
 
